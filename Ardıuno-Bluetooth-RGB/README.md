@@ -1,44 +1,44 @@
 # Arduino Uno ile Bluetooth Kontroll?? RGB LED Projesi
 
-Bu projede, Arduino Uno, HC-06 Bluetooth mod??l?? ve bir RGB LED kullan??larak LED'in renkleri Android telefon ??zerinden kontrol edilebilmektedir. Kullan??c??, Android cihazdan g??nderdi??i harflerle LED'in rengini de??i??tirebilir.
+Bu projede, Arduino Uno, HC-06 Bluetooth modulu ve bir RGB LED kullanilarak LED'in renkleri Android telefon uzerinden kontrol edilebilmektedir. Kullanici, Android cihazdan gonderdigi harflerle LED'in rengini degistirebilir.
 
-## ???? Kullan??lan Malzemeler
+##  Kullanilan Malzemeler
 
 - Arduino Uno
-- HC-06 Bluetooth Mod??l??
-- RGB LED (Ortak Anot ??? HIGH = kapal??, LOW = a????k)
-- 3 x 220?? diren??
+- HC-06 Bluetooth Modulu
+- RGB LED (Ortak Anot - HIGH = kapali, LOW = acik)
+- 3 x 220?? direnc
 - Jumper kablolar
 - Breadboard
-- Android telefon (Bluetooth Serial Controller gibi bir uygulama ??nerilir)
+- Android telefon (Bluetooth Serial Controller gibi bir uygulama onerilir)
 
-## ???? Devre Ba??lant??lar??
+##  Devre Baglantilari
 
 | Bile??en      | Arduino Pin |
 |--------------|-------------|
-| RGB - K??rm??z??| 9           |
-| RGB - Ye??il  | 10          |
+| RGB - Kirmizi| 9           |
+| RGB - Yesil  | 10          |
 | RGB - Mavi   | 11          |
 | HC-06 TX     | Arduino RX (Pin 0) |
 | HC-06 RX     | Arduino TX (Pin 1) |
 | HC-06 VCC    | 5V          |
 | HC-06 GND    | GND         |
 
-> ???? Not: Ortak anot LED kullan??ld??????nda LED'i yakmak i??in pin LOW yap??l??r.
+>  Not: Ortak anot LED kullanildiginda LED'i yakmak icin pin LOW yapilir.
 
-## ???? Bluetooth Komutlar??
+##  Bluetooth Komutlari
 
-Android uygulamas??ndan a??a????daki harfler g??nderilerek LED kontrol edilir:
+Android uygulamasindan asagidadaki harfler gonderilerek LED kontrol edilir:
 
 | Komut | Renk     | A????klama             |
 |-------|----------|----------------------|
-| `k`   | K??rm??z??  | Ye??il ve mavi kapal?? |
-| `y`   | Ye??il    | K??rm??z?? ve mavi kapal?? |
-| `m`   | Mavi     | K??rm??z?? ve ye??il kapal?? |
-| `a`   | Beyaz    | T??m renkler a????k      |
-| `o`   | Kapal??   | T??m renkler kapal??    |
+| `k`   | Kirmizi | Yesil ve mavi kapali|
+| `y`   | Yesil    | Kirmizi ve mavi kapali |
+| `m`   | Mavi     | Kirmizi ve yesil kapali|
+| `a`   | Beyaz    | Tum renkler acik      |
+| `o`   | Kapali  | Tum renkler kapali    |
 
-## ???? Arduino Kod ??zeti
+## Arduino Kod Ozeti
 
-Kodda `SoftwareSerial` ile HC-06 ??zerinden veri al??n??r. Gelen komutlar, `k`, `y`, `m`, `a`, `o` gibi karakterlerle RGB LED'in renklerini de??i??tirir. Ortak anot LED oldu??u i??in `LOW = a????k`, `HIGH = kapal??` olarak ??al??????r.
+Kodda `SoftwareSerial` ile HC-06 uzerinden veri alinir. Gelen komutlar, `k`, `y`, `m`, `a`, `o` gibi karakterlerle RGB LED'in renklerini degistirir. Ortak anot LED oldugu icin `LOW = acik`, `HIGH = kapali` olarak calisir.
 
