@@ -1,4 +1,4 @@
-# Arduino Uno ile Bluetooth Kontroll?? RGB LED Projesi
+# Arduino Uno ile Bluetooth Kontrollu RGB LED Projesi
 
 Bu projede, Arduino Uno, HC-06 Bluetooth modulu ve bir RGB LED kullanilarak LED'in renkleri Android telefon uzerinden kontrol edilebilmektedir. Kullanici, Android cihazdan gonderdigi harflerle LED'in rengini degistirebilir.
 
